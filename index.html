@@ -4,79 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clínica Naturista Eukrasia | Medicina Natural</title>
+    
+    <!-- Iconos de WhatsApp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+
     <style>
-        /* Diseño de la página */
         body {
-            background-color: #282c34; /* Gris oscuro moderno */
-            color: white;              /* Letras blancas */
+            background-color: #282c34;
+            /* Aquí está tu logo de Eukrasia configurado como fondo suave */
+            background-image: linear-gradient(rgba(40, 44, 52, 0.85), rgba(40, 44, 52, 0.85)), 
+                              url('https://c7.staticflickr.com'); /* Marcador para tu logo */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 350px;
+            color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            padding: 50px;
             margin: 0;
-        }
-        h1 { 
-            color: #25d366; /* Verde tipo salud */
-            margin-top: 100px;
-        }
-        p {
-            font-size: 20px;
-            color: #ccc;
-        }
-        .boton-info {
-            padding: 15px 30px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 18px;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-        .boton-info:hover {
-            background-color: #0056b3;
+            padding: 20px;
         }
 
-        /* DISEÑO DEL BOTÓN FLOTANTE DE WHATSAPP */
+        /* Contenedor principal */
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        /* Estilo del Logo Superior */
+        .logo-img {
+            width: 180px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(37, 211, 102, 0.3));
+        }
+
+        h1 { color: #25d366; font-size: 2.2rem; margin: 10px 0; }
+        p { font-size: 1.2rem; color: #ddd; line-height: 1.6; }
+
+        /* Tabla de Horarios */
+        .horarios {
+            margin: 30px auto;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .horarios td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .dia { text-align: left; font-weight: bold; color: #25d366; }
+        .hora { text-align: right; }
+
+        /* Botón de WhatsApp */
         .whatsapp-btn {
             position: fixed;
-            width: 65px;
-            height: 65px;
-            bottom: 40px;
-            right: 40px;
+            width: 70px;
+            height: 70px;
+            bottom: 30px;
+            right: 30px;
             background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-            z-index: 100;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.3s;
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+            z-index: 100;
+            transition: 0.3s ease;
         }
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-        }
-        .whatsapp-img {
-            width: 35px;
-            height: 35px;
-        }
+        .whatsapp-btn:hover { transform: scale(1.1); background-color: #1ebea5; }
     </style>
 </head>
 <body>
 
-    <h1>Bienvenido a Clínica Naturista Eukrasia</h1>
-    <p>Salud natural para tu bienestar físico con producto 100% natural.</p>
-    
-<!-- ESTE CÓDIGO ES EL DEFINITIVO (ICONO DE TEXTO) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <div class="container">
+        <!-- LOGO PRINCIPAL (Asegúrate de guardar tu imagen como 'logo.jpg' en la misma carpeta) -->
+        <img src="mi_logo.png." alt="Logo Eukrasia" class="logo-img">
+        <h1>Clínica Naturista Eukrasia</h1>
+        <p>Suplementos de Medicina Natural<br><strong>"Estado de Salud Perfecto"</strong></p>
 
-<a href="https://wa.me" class="whatsapp-btn" target="_blank">
-    <i class="fab fa-whatsapp" style="font-size:35px; color:white; display:flex; align-items:center; justify-content:center;"></i>
-</a>
-</body>
-</html>
+        <div style="margin: 30px 0; height: 1px; background: linear-gradient(to right, transparent, #25d366, transparent);"></div>
+
+        <h3>Horarios de Atención</h3>
+        <table class="horarios">
+            <tr><td class="dia">Lunes a Viernes</td><td class="hora">8:00 AM - 5:00 PM</td></tr>
+            <tr><td class="dia">Sábado</td><td class="hora">9:00 AM - 1:00 PM</td></tr>
+            <tr><td class="dia">Domingo</td><td class="hora"><span style="color: #ff4d4d;">Cerrado</span></td></tr>
+        </table>
+    </div>
+    
+    <!-- BOTÓN WHATSAPP: Pon tu número aquí -->
+    <a href="https://wa.me" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp" style="font-size:40px;"></i>
+    </a>
+
 </body>
 </html>
