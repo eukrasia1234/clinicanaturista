@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,105 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clínica Naturista Eukrasia | Medicina Natural</title>
     
-    <!-- Iconos de WhatsApp -->
+    <!-- Enlace de iconos (Corregido para que se vea WhatsApp) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
 
     <style>
         body {
-            background-color: #282c34;
-            /* Aquí está tu logo de Eukrasia configurado como fondo suave */
-            background-image: linear-gradient(rgba(40, 44, 52, 0.85), rgba(40, 44, 52, 0.85)), 
-                              url('https://c7.staticflickr.com'); /* Marcador para tu logo */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 350px;
+            background-color: #1a1d23;
             color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             margin: 0;
             padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
 
-        /* Contenedor principal */
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
-            background: rgba(255, 255, 255, 0.05);
+        .card {
+            background: #282c34;
+            max-width: 500px;
+            width: 95%;
             padding: 40px;
             border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Estilo del Logo Superior */
-        .logo-img {
-            width: 180px;
-            height: auto;
+        .logo-box {
             margin-bottom: 20px;
-            filter: drop-shadow(0 0 10px rgba(37, 211, 102, 0.3));
         }
 
-        h1 { color: #25d366; font-size: 2.2rem; margin: 10px 0; }
-        p { font-size: 1.2rem; color: #ddd; line-height: 1.6; }
+        .logo-box img {
+            width: 180px; 
+            height: auto;
+            border-radius: 10px;
+        }
 
-        /* Tabla de Horarios */
-        .horarios {
-            margin: 30px auto;
+        h1 { 
+            color: #25d366; 
+            font-size: 2.1rem; 
+            margin: 5px 0;
+            font-weight: 700;
+        }
+
+        .subt {
+            color: #ccc;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .separator {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #333, transparent);
+            margin: 25px 0;
+        }
+
+        .tabla-horarios {
             width: 100%;
             border-collapse: collapse;
         }
-        .horarios td {
-            padding: 12px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        .dia { text-align: left; font-weight: bold; color: #25d366; }
-        .hora { text-align: right; }
 
-        /* Botón de WhatsApp */
+        .tabla-horarios td {
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .dia { text-align: left; color: #25d366; font-weight: 600; }
+        .hora { text-align: right; color: #ddd; }
+
         .whatsapp-btn {
             position: fixed;
-            width: 70px;
-            height: 70px;
+            width: 65px;
+            height: 65px;
             bottom: 30px;
             right: 30px;
             background-color: #25d366;
             color: white;
             border-radius: 50%;
-            text-decoration: none;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
-            z-index: 100;
-            transition: 0.3s ease;
+            text-decoration: none;
+            font-size: 35px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            transition: 0.3s;
+            z-index: 1000;
         }
         .whatsapp-btn:hover { transform: scale(1.1); background-color: #1ebea5; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- LOGO PRINCIPAL (Asegúrate de guardar tu imagen como 'logo.jpg' en la misma carpeta) -->
-        <img src="logo.jpg" alt="Logo Eukrasia" class="logo-img">
-        
-        <h1>Clínica Naturista Eukrasia</h1>
-        <p>Suplementos de Medicina Natural<br><strong>"Estado de Salud Perfecto"</strong></p>
+    <div class="card">
+        <div class="logo-box">
+            <!-- Recuerda que el archivo debe llamarse logo.jpeg en GitHub -->
+            <img src="logo.jpeg" alt="Logo Eukrasia">
+        </div>
 
-        <div style="margin: 30px 0; height: 1px; background: linear-gradient(to right, transparent, #25d366, transparent);"></div>
+        <h1>Clínica Naturista Eukrasia</h1>
+        
+        <div class="subt">
+            Suplementos de Medicina Natural <br>
+            <strong>"Estado de Salud Perfecto"</strong>
+        </div>
+
+        <div class="separator"></div>
 
         <h3>Horarios de Atención</h3>
-        <table class="horarios">
-            <tr><td class="dia">Lunes a Viernes</td><td class="hora">8:00 AM - 5:00 PM</td></tr>
-            <tr><td class="dia">Sábado</td><td class="hora">9:00 AM - 1:00 PM</td></tr>
-            <tr><td class="dia">Domingo</td><td class="hora"><span style="color: #ff4d4d;">Cerrado</span></td></tr>
+        
+        <table class="tabla-horarios">
+            <tr>
+                <td class="dia">Lunes a Viernes</td>
+                <td class="hora">8:00 AM - 5:00 PM</td>
+            </tr>
+            <tr>
+                <td class="dia">Sábado</td>
+                <td class="hora">9:00 AM - 1:00 PM</td>
+            </tr>
+            <tr>
+                <td class="dia">Domingo</td>
+                <td class="hora" style="color: #ff4d4d; font-weight: bold;">Cerrado</td>
+            </tr>
         </table>
     </div>
-    
-    <!-- BOTÓN WHATSAPP: Pon tu número aquí -->
+
+    <!-- BOTÓN CON TU NÚMERO CORREGIDO -->
     <a href="https://wa.me" class="whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp" style="font-size:40px;"></i>
+        <i class="fab fa-whatsapp"></i>
     </a>
 
 </body>
