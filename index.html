@@ -3,63 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página Web</title>
+    <title>Clínica Naturista Eukrasia | Medicina Natural</title>
     <style>
-        /* Un poco de diseño rápido para que no se vea vacío */
+        /* Diseño de la página */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #282c34; /* Gris oscuro moderno */
+            color: white;              /* Letras blancas */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             padding: 50px;
+            margin: 0;
         }
-        h1 {
-            color: #333;
+        h1 { 
+            color: #25d366; /* Verde tipo salud */
+            margin-top: 100px;
         }
         p {
-            color: #666;
+            font-size: 20px;
+            color: #ccc;
+        }
+        .boton-info {
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .boton-info:hover {
+            background-color: #0056b3;
+        }
+
+        /* DISEÑO DEL BOTÓN FLOTANTE DE WHATSAPP */
+        .whatsapp-btn {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+        .whatsapp-img {
+            width: 35px;
+            height: 35px;
         }
     </style>
 </head>
 <body>
 
-    <h1>¡Hola Mundo!</h1>
-    <p>eukrasia.wed clinica naturista Code.</p>
-    <p>Ya productos naturales
-        .</p>
-
-</body>DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Mi Web con Imagen y Botón</title>
-    <style>
-        body { font-family: sans-serif; text-align: center; padding: 20px; }
-        img { width: 300px; border-radius: 10px; margin-bottom: 20px; }
-        button { 
-            padding: 10px 20px; 
-            background-color: #007bff; 
-            color: rgb(255, 255, 255); 
-            border: none; 
-            border-radius: 5px; 
-            cursor: pointer; 
-        }
-        button:hover { background-color: #0056b3; }
-    </style>
-</head>
-<body>
-
-    <h1>¡Ya funciona!</h1>
+    <h1>Bienvenido a Clínica Naturista Eukrasia</h1>
+    <p>Salud natural para tu bienestar físico con producto 100% natural.</p>
     
-    <!-- Una imagen de ejemplo desde internet -->
-    <img src="https://via.placeholder.com" alt="Imagen de ejemplo">
+ <!-- BOTÓN DE WHATSAPP CON LOGO GARANTIZADO -->
+    <a href="https://wa.me" class="whatsapp-btn" target="_blank">
+        <img src="https://upload.wikimedia.org" style="width:35px;height:35px;" alt="WhatsApp">
+    </a>
 
-    <br>
-
-    <!-- Un botón que muestra una alerta al hacer clic -->
-    <button onclick="alert('¡Hola! Hiciste clic en el botón')">
-        Haz clic aquí
-    </button>
-
-</body>  background-color: #282c34; /* Un gris oscuro moderno */
-    color: white;              /* Letras blancas */
-    font-family: 'Segoe UI', sans-serif;</body>
+</body>
+</html>
+</body>
+</html>
