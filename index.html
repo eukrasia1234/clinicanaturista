@@ -1,146 +1,87 @@
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clínica Naturista Eukrasia | Medicina Natural</title>
-    
-    <!-- Enlace de iconos (Corregido para que se vea WhatsApp) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
-
+    <title>Clínica Naturista Eukrasia</title>
     <style>
-        body {
-            background-color: #1a1d23;
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        .card {
-            background: #282c34;
-            max-width: 500px;
-            width: 95%;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .logo-box {
-            margin-bottom: 20px;
-        }
-
-        .logo-box img {
-            width: 180px; 
-            height: auto;
+        /* Tus estilos existentes mejorados */
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; padding: 20px; }
+        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); max-width: 400px; width: 100%; text-align: center; }
+        .logo-box img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #1ebea5; }
+        .separator { height: 2px; background-color: #1ebea5; margin: 20px auto; width: 50%; }
+        .tabla-horarios { width: 100%; margin: 20px 0; border-collapse: collapse; }
+        .tabla-horarios td { padding: 8px; border-bottom: 1px solid #eee; }
+        .dia { font-weight: bold; text-align: left; }
+        
+        /* Contenedor de Video Seguro (YouTube) */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Relación 16:9 */
+            height: 0;
+            overflow: hidden;
             border-radius: 10px;
+            margin-top: 20px;
         }
-
-        h1 { 
-            color: #25d366; 
-            font-size: 2.1rem; 
-            margin: 5px 0;
-            font-weight: 700;
-        }
-
-        .subt {
-            color: #ccc;
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            line-height: 1.4;
-        }
-
-        .separator {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #333, transparent);
-            margin: 25px 0;
-        }
-
-        .tabla-horarios {
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            border-collapse: collapse;
+            height: 100%;
+            border: 0;
         }
-
-        .tabla-horarios td {
-            padding: 12px 0;
-            border-bottom: 1px solid #333;
-        }
-
-        .dia { text-align: left; color: #25d366; font-weight: 600; }
-        .hora { text-align: right; color: #ddd; }
 
         .whatsapp-btn {
-            position: fixed;
-            width: 65px;
-            height: 65px;
-            bottom: 30px;
-            right: 30px;
+            display: inline-block;
             background-color: #25d366;
             color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 12px 25px;
+            border-radius: 50px;
             text-decoration: none;
-            font-size: 35px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            font-weight: bold;
+            margin-top: 20px;
             transition: 0.3s;
-            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
         }
-        .whatsapp-btn:hover { transform: scale(1.1); background-color: #1ebea5; }
+        .whatsapp-btn:hover { transform: scale(1.05); background-color: #1ebea5; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <div class="logo-box">
-            <!-- Recuerda que el archivo debe llamarse logo.jpeg en GitHub -->
-            <img src="logo.jpeg" alt="Logo Eukrasia">
-        </div>
-
-        <video autoplay muted loop playsinline style="width: 100%; max-width: 600px; display: block; margin: 20px auto; border-radius: 15px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
- <source src="clinica.mp4" type="video/mp4">
-  Tu navegador no soporta videos.
-</video>
-
-        <h1>Clínica Naturista Eukrasia</h1>
-        
-        <div class="subt">
-            Suplementos de Medicina Natural <br>
-            <strong>"Estado de Salud Perfecto"</strong>
-        </div>
-
-        <div class="separator"></div>
-
-        <h3>Horarios de Atención</h3>
-        
-        <table class="tabla-horarios">
-            <tr>
-                <td class="dia">Lunes a Viernes</td>
-                <td class="hora">8:00 AM - 5:00 PM</td>
-            </tr>
-            <tr>
-                <td class="dia">Sábado</td>
-                <td class="hora">9:00 AM - 1:00 PM</td>
-            </tr>
-            <tr>
-                <td class="dia">Domingo</td>
-                <td class="hora" style="color: #ff4d4d; font-weight: bold;">Cerrado</td>
-            </tr>
-        </table>
+<div class="card">
+    <div class="logo-box">
+        <!-- Asegúrate que la imagen se llame logo.jpeg en tu carpeta -->
+        <img src="logo.jpeg" alt="Logo Eukrasia">
     </div>
 
-    <!-- BOTÓN CON TU NÚMERO CORREGIDO -->
-    <a href="https://wa.me" class="whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+    <h1>Clínica Naturista Eukrasia</h1>
+    
+    <div class="subt">
+        Suplementos de Medicina Natural <br>
+        <strong>"Estado de Salud Perfecto"</strong>
+    </div>
+
+    <div class="separator"></div>
+
+    <h3>Horarios de Atención</h3>
+    <table class="tabla-horarios">
+        <tr><td class="dia">Lunes a Viernes</td><td>7:00 AM - 6:00 PM</td></tr>
+        <tr><td class="dia">Sábado</td><td>7:00 AM - 12:00 PM</td></tr>
+    </table>
+
+    <!-- SECCIÓN DEL VIDEO (Vía YouTube para que no se bloquee) -->
+    <div class="video-container">
+        <!-- Reemplaza ID_DEL_VIDEO con el código de tu video de YouTube -->
+        <iframe src="https://www.youtube.com" allowfullscreen></iframe>
+    </div>
+
+    <a href="https://wa.me" class="whatsapp-btn">
+        Contactar por WhatsApp
     </a>
+</div>
 
 </body>
 </html>
